@@ -22,10 +22,10 @@ main = do
     windowsMask = mod4Mask
     noMask = 0
     tall = ResizableTall {
-      _nmaster = 1     -- number of master windows
+      _nmaster = 1       -- number of master windows
     , _delta   = (3/100) -- change when resizing
-    , _frac    = (1/2)    -- width of master
-    , _slaves  = [ 2 ]  -- fraction to multiply to slave window heights
+    , _frac    = (1/2)   -- width of master
+    , _slaves  = [ 2 ]   -- fraction to multiply to slave window heights
     }
     myKeys :: XConfig Layout -> Map (ButtonMask, KeySym) (X ())
     myKeys conf@(XConfig {
