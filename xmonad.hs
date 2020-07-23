@@ -50,7 +50,7 @@ main = do
       ] ++ [
         ((modm .|. mask, key), windows $ f wspId)
           | (wspId, key) <- zip workspaces [xK_1 ..]
-          , (mask, f) <- [
+          , (mask, f)    <- [
               (noMask,      W.greedyView)
             , (shiftMask,   W.shift)
             , (controlMask, swapWithCurrent)
