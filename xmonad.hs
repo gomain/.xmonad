@@ -15,7 +15,7 @@ main = do
   , modMask = windowsMask -- altMask .|. controlMask
   , keys = myKeys
   , startupHook = do
-      spawn "xmodmap ~/.Xmodmap"
+      spawn "xmodmap ~/.config/xmodmap/all_keyboards"
   }
   where
     altMask = mod1Mask
