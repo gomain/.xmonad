@@ -4,12 +4,12 @@ import           XMonad
 import qualified XMonad.StackSet as W
 import XMonad.Layout.BoringWindows
 import XMonad.Layout.ResizableTile
-import XMonad.Wallpaper
+--import XMonad.Wallpaper
 import XMonad.Actions.SwapWorkspaces
 import qualified XMonad as X
 
 main = do
-  setRandomWallpaper ["$HOME/.config/wallpapers"]
+  --setRandomWallpaper ["$HOME/.config/wallpapers"]
   xmonad $ def {
     layoutHook =  boringWindows $ tall ||| Full
   , modMask = windowsMask -- altMask .|. controlMask
