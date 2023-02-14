@@ -49,7 +49,9 @@ main = do
               | (mask, f) <- [ (noMask, focusUp), (shiftMask, windows W.swapUp) ]
           ] ++ [
             ((modm .|. mask, key), screenWorkspace scrId >>= flip whenJust (windows . f))
-              | (scrId, key) <- zip screens [xK_a, xK_o, xK_e, xK_u]
+              --   4
+              -- 1 2 3
+              | (scrId, key) <- zip screens [xK_a, xK_o, xK_e, xK_comma]
               , (mask, f)    <- [(noMask, W.view), (shiftMask, W.shift)]
           ] ++ [
             ((modm .|. mask, key), windows $ f wspId)
